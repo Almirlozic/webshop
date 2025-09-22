@@ -121,8 +121,6 @@
       text-decoration: underline;
       cursor: pointer;
     }
-
-    /* Hvis sold out: gør billedet lysere */
     .product-card.sold img {
       opacity: 0.4;
     }
