@@ -1,0 +1,130 @@
+/* categories mobil css */
+    .categories h2 {
+     grid-column: 1 / -1; 
+     margin-top: 50px;
+     font-size: 2rem;
+    }
+    
+    .categories {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr); 
+     gap: 15px;
+     padding: 10px 10px;
+    }
+    .categories a{
+       background-color: rgba(126, 125, 125, 0.884);
+       color: white;
+       text-decoration: none;
+       padding: 30px 20px;
+       font-size: 1rem;
+       font-weight: 800;
+    }
+    .categories a:hover{
+       background-color: rgb(107, 107, 107);
+    }
+
+/* categories css */
+@media (min-width: 1024px) {
+    .categories h2 {
+     grid-column: 1 / -1; 
+     margin: 0 0 20px 0; 
+     font-size: 2rem;
+    }
+    
+    .categories {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr); 
+     gap: 15px;
+     padding: 100px 100px;
+    }
+    .categories a{
+       background-color: rgba(126, 125, 125, 0.884);
+       color: white;
+       text-decoration: none;
+       padding: 30px 20px;
+       font-size: 1rem;
+       font-weight: 800;
+    }
+    .categories a:hover{
+       background-color: rgb(107, 107, 107);
+    }
+    /* produkt css desktop */
+        .product-grid h2 {
+     grid-column: 1 / -1; 
+     margin: 0 0 20px 0; 
+     font-size: 2rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 100px 50px;
+    }
+
+    .product-card {
+      position: relative;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .sold-out {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+    }
+
+    .discount {
+      display: inline-block;
+      background: red;
+      color: white;
+      font-size: 0.9rem;
+      padding: 3px 6px;
+      border-radius: 3px;
+      margin-top: 5px;
+    }
+
+    .product-info {
+      margin-top: 10px;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .product-meta {
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    .product-price {
+      margin: 5px 0;
+    }
+
+    .old-price {
+      color: gray;
+      text-decoration: line-through;
+      margin-right: 5px;
+    }
+
+    .read-more {
+      font-size: 0.9rem;
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Hvis sold out: gør billedet lysere */
+    .product-card.sold img {
+      opacity: 0.4;
+    }
+}
+
