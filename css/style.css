@@ -49,7 +49,7 @@
        background-color: rgb(107, 107, 107);
     }
     /* produkt css desktop */
-        .product-grid h2 {
+      .product-grid h2 {
      grid-column: 1 / -1; 
      margin: 0 0 20px 0; 
      font-size: 2rem;
@@ -69,7 +69,6 @@
       width: 100%;
       border-radius: 6px;
     }
-
     .sold-out {
       position: absolute;
       top: 10px;
@@ -124,5 +123,104 @@
     .product-card.sold img {
       opacity: 0.4;
     }
+    /* Produkt css desktop */
+    .grid_2-3{
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 10px;
+      color: #041E3A;
+    }
+    .grid_2-3 img{
+      padding: 100px 100px;
+    }
+    .product-info{
+      margin-top: 100px;
+    }
+    .product-info h1{
+      line-height: 2;
+      font-size: 4rem;
+    }
+    .product-info h3, p{
+      line-height: 2;
+    }
+    .product-info h3{
+      font-size: 1.3rem;
+    }
+    .product-info p{
+      font-size: 1rem;
+    }
+    .size{
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      margin-bottom: -50px;
+    }
+    .size p{
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 5px 50px;
+      font-size: 0.8rem;
+      margin-bottom: 100px;
+    }
+    .product-info h4{
+      margin-top: 50px;
+    }
+    .size p:hover{
+      background-color: rgb(237, 237, 237);
+    }
+    .size p.active {
+    background: #000000;
+    color: white;
+  }
+  .p-info{
+    padding: 100px 5px;
+    line-height: 2;
+  }
+    .product-btn{
+      background-color: #041E3A;
+      color: white;
+      text-decoration: none;
+      padding: 25px 250px;
+    }
+    .product-btn:hover{
+      background-color: #052649f1;
+    }
+    .color{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .color p{
+      font-size: 1rem;
+    }
+    .color-btn1{
+      background-color: black;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .color-btn2{
+      background-color: rgb(255, 0, 0);
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .color-btn3{
+      background-color: rgb(255, 255, 255);
+      padding: 10px 10px;
+      border: 0.5px solid black;
+      cursor: pointer;
+    }
+    .color-btn4{
+      background-color: rgb(120, 120, 120);
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+
+
+
+
 }
 
