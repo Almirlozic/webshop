@@ -3,6 +3,7 @@
      grid-column: 1 / -1; 
      margin-top: 50px;
      font-size: 2rem;
+     color: #052649f1;
     }
     
     .categories {
@@ -12,8 +13,8 @@
      padding: 10px 10px;
     }
     .categories a{
-      border: 1px solid #052649f1;
-       color: rgb(0, 0, 0);
+       border: 0.5px solid #052649f1;
+       color: #052649f1;
        text-decoration: none;
        padding: 30px 20px;
        font-size: 1rem;
@@ -54,6 +55,7 @@
      grid-column: 1 / -1; 
      margin: 0 0 20px 0; 
      font-size: 2rem;
+     color: #052649f1;
     }
     .product-grid {
       display: grid;
@@ -93,6 +95,7 @@
 
     .product-info {
       margin-top: 10px;
+      color: #041E3A;
     }
 
     .product-title {
