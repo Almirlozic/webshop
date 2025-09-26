@@ -7,11 +7,11 @@ const id = urlParams.get("id");
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then(res => res.json())
-  .then((product) => {
-    console.log(product.articletype);
+  .then(showProduct); 
 
+  function showProduct(product){
     productContainer.innerHTML = `
-      <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}">
+      <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp">
       <div class="product-info">
         <p>${product.gender} / ${product.category}</p>
         <h1>${product.productdisplayname}</h1>
@@ -33,6 +33,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
           <p>${product.description}</p>
         </div>
       </div>`;
-  });
+  };
 
 
