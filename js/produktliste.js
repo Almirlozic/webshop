@@ -1,6 +1,11 @@
-const productListContainer = document.querySelector(".product-grid");
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
 
-fetch("https://kea-alt-del.dk/t7/api/products?limit=100")
+
+const productListContainer = document.querySelector(".product-grid");
+const header = document.querySelector("h2").textContent = category
+
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
   .then(res => res.json())
   .then(data => showProducts(data));
 
