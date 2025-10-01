@@ -1,9 +1,19 @@
-/* categories mobil css */
+/* categories mobil css forside */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+    .hero img{
+      width: 100%;
+      height: auto;
+    }
+
     .categories {
      display: grid;
-     grid-template-columns: repeat(2, 1fr); 
+     grid-template-columns: repeat(1, 1fr); 
      gap: 15px;
-     padding: 10px 10px;
+     padding: 50px 20px;
     }
     .categories a{
        border: 0.5px solid #052649f1;
@@ -13,9 +23,180 @@
        font-size: 1rem;
        font-weight: 800;
     }
-    .categories a:hover{
-       transform: scale(1.05);
+/* filter button mobil css */
+   .filter{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 10px 10px;
+
     }
+    .filter button{
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+      padding: 10px 20px;
+    }
+/* produkter css mobil*/
+    .product-grid {
+      display: grid;
+      gap: 20px;
+      padding: 100px 10px;
+      margin-top: -90px;
+    }
+   h2{
+     font-size: 3rem;
+     color: #000000f1;
+     margin-top: 50px;
+     padding: 0 10px;
+    }
+    button:hover{
+      transform: scale(1.05);
+    }
+
+    .product-card {
+      position: relative;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .sold-out {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+    }
+
+    .discount {
+      display: inline-block;
+      background: red;
+      color: white;
+      font-size: 0.9rem;
+      padding: 3px 6px;
+      border-radius: 3px;
+      margin-top: 5px;
+    }
+
+    .product-info {
+      margin-top: 10px;
+      color: #041E3A;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .product-meta {
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    .product-price {
+      margin: 5px 0;
+    }
+
+    .old-price {
+      color: gray;
+      text-decoration: line-through;
+      margin-right: 5px;
+    }
+
+    .read-more {
+      font-size: 0.9rem;
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .product-card.sold img {
+      opacity: 0.4;
+    }
+    /* produktview css mobil*/
+       .grid_2-3{
+        gap: 10px;
+        color: #041E3A;
+        margin: 10px 10px;
+    }
+    .grid_2-3 img{
+      width: 100%;
+      height: auto;
+    }
+    .product-info h1{
+      line-height: 2;
+      font-size: 3rem;
+    }
+    .product-info h3, p{
+      line-height: 2;
+    }
+    .product-info h3{
+      font-size: 1.3rem;
+    }
+    .product-info p{
+      font-size: 1rem;
+    }
+    .size{
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      margin: 20px 5px;
+    }
+    .size p{
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 5px 30px;
+      font-size: 0.8rem;
+      margin-bottom: 30px;
+    }
+    .product-info h4{
+      margin-top: 50px;
+    }
+    .size p:hover{
+      background-color: rgb(237, 237, 237);
+    }
+    .size p.active {
+    background: #000000;
+    color: white;
+  }
+  .p-info{
+    padding: 10px 5px;
+    line-height: 1.5;
+    margin-top: -20px;
+  }
+    .product-btn{
+      background-color: #041E3A;
+      color: white;
+      text-decoration: none;
+      padding: 20px 125px;
+    }
+    .product-btn:hover{
+      background-color: #052649f1;
+    }
+    .color{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .color p{
+      font-size: 1rem;
+    }
+    .filter button:hover{
+      transform: translatey(-5px);
+    }
+
+
+
+
+
+
+
+
+
 
 /* categories css desktop */
 @media (min-width: 1024px) {
@@ -40,6 +221,9 @@
      grid-template-columns: repeat(3, 1fr); 
      gap: 15px;
      padding: 100px 100px;
+    }
+    .categories a:hover{
+      transform: translateY(-5px);
     }
 
  
@@ -143,6 +327,7 @@
       color: #041E3A;
     }
     .grid_2-3 img{
+      width: 500px;
       padding: 100px 100px;
     }
     .product-info{
@@ -187,12 +372,14 @@
   .p-info{
     padding: 100px 5px;
     line-height: 2;
+    margin-top: -50px;
   }
     .product-btn{
       background-color: #041E3A;
       color: white;
       text-decoration: none;
       padding: 25px 250px;
+      margin: 0 0;
     }
     .product-btn:hover{
       background-color: #052649f1;
