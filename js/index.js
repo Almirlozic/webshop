@@ -1,6 +1,6 @@
 const categorylist = document.querySelector(".categories");
 
-fetch("http://kea-alt-del.dk/t7/api/categories")
+fetch("https://kea-alt-del.dk/t7/api/categories")
     .then(response => response.json())
     .then(categories => showCategories(categories));
 
