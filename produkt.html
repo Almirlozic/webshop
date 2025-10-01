@@ -14,13 +14,29 @@
             <img src="img/logo2.svg" alt="logo">
         </a>
     </div>
-    <nav>
+    <nav id="navMenu">
         <a href="index.html">Home</a>
         <a href="produktliste.html">Produktliste</a>
         <a href="produkt.html">Produkter</a>
     </nav>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
     <main class="grid_2-3"></main>
     <script src="js/produkt.js"></script>
+        <script>
+const burger = document.getElementById('burger');
+const navMenu = document.getElementById('navMenu'); // præcis som i HTML
+
+burger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    burger.classList.toggle('toggle');
+});
+
+
+</script>
 </body>
 </html>

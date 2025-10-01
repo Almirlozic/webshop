@@ -6,32 +6,98 @@ body{
     background-color:  #ffffff;
 }
 
-/* Header css */
 header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    border-bottom: 0.5px solid black;
-    padding: 30px 30px;
-}
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 20px;
+            backdrop-filter: blur(5px);
+            gap: 1100px;
+            border-bottom: 1px solid black;
+        }
 
-header a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0 10px;
-}
+        .logo img{
+            width: 100px;
+        }
+    
 
-header a:hover {
-    opacity: 0.5;
-}
 
-.logo img {
-    width: 100px;
-    height: auto;
-}
-#logo:hover{
-    opacity: 1;
-}
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+        nav a:hover{
+            border-bottom: 0.5px solid black;
+        }
+
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .burger span {
+            width: 25px;
+            height: 3px;
+            background-color: #000000;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .burger.toggle span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .burger.toggle span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.toggle span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+
+        @media (max-width: 768px) {
+            header{
+                display: flex;
+                justify-content: space-between;
+                gap: 27px;
+            }
+            nav {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: rgba(0,0,0,0.8);
+                flex-direction: column;
+                width: 200px;
+                padding: 10px;
+                display: none;
+               
+            }
+
+            nav a {
+                margin: 10px 0;
+                color: #fff;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .logo img{
+                width: 60px;
+        }
+            
+        }
 
 
