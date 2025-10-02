@@ -5,27 +5,51 @@ const category = urlParams.get("category");
 const productListContainer = document.querySelector(".product-grid");
 const header = document.querySelector("h2").textContent = category
 
-document.querySelectorAll(".filter button").forEach(knap => knap.addEventListener("click", showFiltered));
+document.querySelector(".filter").addEventListener("click", showFiltered);
 
-function showFiltered() {
-  console.log(this.dataset.gender);
-  const gender = this.dataset.gender;
-
-  if (gender === "All") {
-    showProducts(allData);
+function showFiltered(event){
+  const gender = event.target.dataset.gender;
+  if (gender == "All"){
+    showProducts(allData)
+    currentDataSet = allData
+    
   } else {
     const udsnit = allData.filter(product => product.gender == gender);
-    showProducts(udsnit);
+    currentDataSet = udsnit;
   }
+  showProducts(currentDataSet);
+}
+document.querySelector(".sorting").addEventListener("click", sortItems);
+
+function sortItems(event) {
+  const btn = event.target.closest("button[data-direction]");
+  console.log("btn:", btn); // <-- tjek hvad der bliver fanget
+  if (!btn || !currentDataSet) return;
+
+  const direction = btn.dataset.direction;
+  console.log("direction:", direction);
+
+  if(direction === "lohi"){
+    currentDataSet.sort((a, b) => a.price - b.price);
+  } else if(direction === "hilo") {
+    currentDataSet.sort((a, b) => b.price - a.price);
+  }
+
+  showProducts(currentDataSet);
 }
 
- let allData;
+
+
+
+ let allData, currentDataSet;
 fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
   .then(res => res.json())
   .then(data => {
     allData = data;
-    showProducts(allData);
+    currentDataSet = [...allData]; // <--- tilføj dette
+    showProducts(currentDataSet);
   });
+
 
 function showProducts(products) {
 
